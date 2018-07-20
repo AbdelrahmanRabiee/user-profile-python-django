@@ -1,0 +1,31 @@
+
+{% load static %}
+
+<!-- Scripts -->
+        <script src="{% static 'assets/js/jQuery_v3_2_0.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'assets/plugins/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'assets/plugins/Chart.min.js' %}"></script>
+		<script src="{% static 'assets/plugins/jquery.dataTables.min.js' %}"></script>
+		<script src="{% static 'assets/plugins/dataTables.responsive.min.js' %}"></script>
+        <script src="{% static 'assets/js/js.js' %}"></script>
+    	<script src="{% static 'formset/jquery.formset.js' %}"></script>
+    	<script type="text/javascript">
+
+        $('.formset_row').formset({
+            addText: 'add Experience',
+            deleteText: 'remove',
+            prefix: 'experience_set'
+        });
+
+        $('.formset_row2').formset({
+            addText: 'add Qualification',
+            deleteText: 'remove',
+            prefix: 'qualification_set'
+        });
+
+
+
+
+    </script>

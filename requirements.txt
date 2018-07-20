@@ -1,0 +1,5 @@
+Django==2.0.7
+django-betterforms==1.2
+Pillow==5.2.0
+pytz==2018.5
+six==1.11.0

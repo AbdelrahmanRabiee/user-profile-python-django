@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+			{% block content %}
+			<!-- MAIN CONTENT -->
+			<div class="main-content" id="content-wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12 clear-padding-xs">
+							<h5 class="page-title"><i class="fa fa-user-secret"></i>USER PROFILE</h5>
+							<div class="section-divider"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 clear-padding-xs">
+							<div class="col-md-12">
+								<div class="dash-item first-dash-item">
+									<h6 class="item-title"><i class="fa fa-user"></i>APPLICANT INFO</h6>
+									<div class="inner-item">
+										<div class="dash-form">
+
+											<form action="" method="post" enctype="multipart/form-data">
+												{% csrf_token %}
+
+												{% for field in form.visible_fields %}
+
+											<div class="col-sm-3">
+												{% if field.label == 'Birthday' %}
+												<label class="clear-top-margin"><i class="fa fa-calendar"></i> {{ field.label }}:</label>
+												{% endif %}
+
+												{% if field.label == 'Birth Place' %}
+												<label class="clear-top-margin"><i class="fa fa-location-arrow"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'Mobile' %}
+												<label class="clear-top-margin"><i class="fa fa-phone"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'First Name (Arabic)' %}
+												<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'Second Name (Arabic)' %}
+												<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'Third Name (Arabic)' %}
+												<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'Family Name (Arabic)' %}
+												<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i> {{ field.label }}: </label>
+													{% endif %}
+
+
+												{% if field.label == 'Gender' %}
+												<label ><i class="fa fa-venus"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'Personal Picture' %}
+												<label ><i class="fa fa-file-picture-o"></i> {{ field.label }}: </label>
+													{% endif %}
+
+
+												{% if field.label == 'Upload your resume' %}
+												<label ><i class="fa fa-file-picture-o"></i> {{ field.label }}: </label>
+													{% endif %}
+
+
+
+
+												{% if field.label == 'Job title' %}
+												<label ><i class="fa fa-shopping-bag"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'Employer' %}
+												<label ><i class="fa fa-user-circle-o"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'Start date' %}
+												<label ><i class="fa fa-file-picture-o"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'End date' %}
+												<label ><i class="fa fa-file-picture-o"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'Experience letter' %}
+												<label ><i class="fa fa-file-picture-o"></i> {{ field.label }}: </label>
+													{% endif %}
+
+
+
+
+												{% if field.label == 'Type' %}
+												<label ><i class="fa fa-graduation-cap"></i> {{ field.label }}: </label>
+													{% endif %}
+
+												{% if field.label == 'Education' %}
+												<label ><i class="fa fa-graduation-cap"></i> {{ field.label }}: </label>
+													{% endif %}
+
+
+
+            										{{ field }}
+												{% if field.help_text %}
+           									 <br />{{ field.help_text }}
+          											{% endif %}
+											</div>
+
+												{% if forloop.counter == 3 or forloop.counter == 7 or forloop.counter == 10 or forloop.counter == 12 or forloop.counter == 15 %}
+
+            										<div class="clearfix"></div>
+    														{% endif %}
+													{% endfor %}
+
+
+															<div class="clearfix"></div>
+										<div class="clearfix"></div>
+										<div class="clearfix"></div>
+
+
+										<div class="clearfix"></div>
+										<div class="clearfix"></div>
+												<div class="clearfix"></div>
+										<div class="clearfix"></div>
+												<div class="clearfix"></div>
+										<div class="clearfix"></div>
+												<div class="clearfix"></div>
+										<div class="clearfix"></div>
+											<div class="col-sm-12">
+												<button type="submit" class="clear-top-margin" ><i class="fa fa-paper-plane"></i> SAVE </button>
+											</div>
+
+
+												<div class="clearfix"></div>
+										<div class="clearfix"></div>
+												<div class="clearfix"></div>
+										<div class="clearfix"></div>
+												<div class="clearfix"></div>
+										<div class="clearfix"></div>
+												<div class="clearfix"></div>
+										<div class="clearfix"></div>
+															</form>
+												</div>
+										<!--form end-->
+
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+				</div>
+
+
+			{% endblock %}
